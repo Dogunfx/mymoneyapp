@@ -1,13 +1,23 @@
+"use client";
 export default function Page() {
+  function handleButtonClick() {
+    var age = 1 + 12;
+    alert(age);
+
+    age = 45;
+    alert(age);
+
+    age -= 20 * 2;
+    alert(age);
+  }
+
   return (
     <div>
-      <button>Click Me</button>
-      <p>This will output the number of times the button was click</p>
+      <button onClick={handleButtonClick}>Click Me</button>
+      <p>This will output the number of times the button was clicked</p>
     </div>
   );
 }
-
-function SimpleTodo() {}
 
 // comments are code or line of text that is ignore by language translator
 // comment are primary used fot explaining codes
@@ -26,6 +36,7 @@ function SimpleTodo() {}
 // arithmetic operators   -,+,*,/
 // relational operators      >,<, >=, <=, ==
 //conditional operators    ? :
+// assignments operators ....     =, +=, -=, *=, !=
 
 //3  --- HTML element / or group of HTML Elements
 

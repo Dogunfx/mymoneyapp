@@ -43,3 +43,6 @@ export default function Page() {
 // events ----- events are things that can happen to a component
 
 //events handlers are codes or javascripts statements that are executed when an events occurs
+
+// programming javascript
+// library reactjs, nextjs

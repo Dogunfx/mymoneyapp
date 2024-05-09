@@ -1,8 +1,6 @@
 "use client";
-
 import "./style.css";
 import { useState } from "react";
-
 export default function Page() {
   var [currentMargin, update] = useState(13);
   var [secondClass, updateClassName] = useState("box");
@@ -83,5 +81,5 @@ export default function Page() {
 // different kinds of webpage design // Frontend design
 
 // static ---- consisting of HTML and CSS
-// interactive ----- consisting of HTML, CSS and JAVASCRIPT   
+// interactive ----- consisting of HTML, CSS and JAVASCRIPT
 // Dynamic -------- consisting of HTML, CSS, JAVASCRIPT and a Backend programming language

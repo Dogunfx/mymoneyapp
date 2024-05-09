@@ -1,20 +1,45 @@
 "use client";
+
+import "./style.css";
+import { useState } from "react";
+
 export default function Page() {
-  function handleButtonClick() {
-    var age = 1 + 12;
-    alert(age);
+  var [currentMargin, update] = useState(13);
+  var [secondClass, updateClassName] = useState("box");
 
-    age = 45;
-    alert(age);
+  var myCustomStyle = {
+    marginLeft: currentMargin,
+  };
 
-    age -= 20 * 2;
-    alert(age);
+  function handleMovement() {
+    currentMargin += 40;
+    update(currentMargin);
+    secondClass = "box";
+    updateClassName(secondClass);
+  }
+
+  function handleClassChange() {
+    currentMargin -= 40;
+    update(currentMargin);
+    secondClass = "box-2";
+    updateClassName(secondClass);
+  }
+
+  function resetPosition() {
+    currentMargin = 0;
+    update(currentMargin);
   }
 
   return (
     <div>
-      <button onClick={handleButtonClick}>Click Me</button>
+      <button onClick={handleMovement}>Click Me</button>
+      <button onClick={handleClassChange}>Change Color</button>
+      <button onClick={resetPosition}>Move Back</button>
       <p>This will output the number of times the button was clicked</p>
+      {currentMargin}
+      <p className={secondClass} style={myCustomStyle}>
+        Move Me
+      </p>
     </div>
   );
 }
@@ -46,3 +71,17 @@ export default function Page() {
 
 // programming javascript
 // library reactjs, nextjs
+
+// state in reactjs -----    is a variable that updates the UI when the values changes
+
+// variable don't have the ability to re-render a UI, once their values changes
+
+// today
+// working with state in react
+// using state to update html content and css properties
+
+// different kinds of webpage design // Frontend design
+
+// static ---- consisting of HTML and CSS
+// interactive ----- consisting of HTML, CSS and JAVASCRIPT   
+// Dynamic -------- consisting of HTML, CSS, JAVASCRIPT and a Backend programming language

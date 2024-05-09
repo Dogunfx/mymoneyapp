@@ -1,0 +1,19 @@
+.box {
+    background-color: red;
+    color: white;
+    width: 80px;
+    text-align: center;
+    align-content: center;
+    height: 80px;
+    transition: all 0.3s linear;
+}
+
+.box-2 {
+    background-color: goldenrod;
+    color: black;
+    width: 80px;
+    text-align: center;
+    align-content: center;
+    height: 80px;
+    transition: all 0.3s linear;
+}
